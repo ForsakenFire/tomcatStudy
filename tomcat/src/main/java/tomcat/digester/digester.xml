@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+	<teacher>
+		<student name="stu1" code = "001">
+			<extension>
+				<property-name>key1</property-name>
+				<property-value>value1</property-value>
+			</extension>
+		</student>
+		<student name="stu2" code = "002">
+			<extension>
+				<property-name>key2</property-name>
+				<property-value>value2</property-value>
+			</extension>
+		</student>
+	</teacher>
+	<teacher>
+		<student name="stu3" code="003">
+			<extension>
+				<property-name>key3</property-name>
+				<property-value>value3</property-value>
+			</extension>
+		</student>
+		<student name="stu4" code="004">
+			<extension>
+				<property-name>key4</property-name>
+				<property-value>value4</property-value>
+			</extension>
+		</student>
+	</teacher>
+</school>
