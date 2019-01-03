@@ -17,7 +17,9 @@ public class Main {
 		Digester digester = new Digester();
 		School school = new School();
 		File file = null;
+		//是否需要验证xml文档的合法性，false表示不需要进行DTD规则校验
 		digester.setValidating(false);
+		//是否需要进行节点设置规则校验
 		digester.setRulesValidation(true);
 		//匹配school节点，创建school对象
 		digester.addObjectCreate("school", "tomcat.digester.bean.School");
