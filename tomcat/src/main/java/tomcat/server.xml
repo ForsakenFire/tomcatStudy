@@ -70,7 +70,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector  connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -146,7 +146,8 @@
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
       </Realm>
 	  <!-- 该service的基础路径：该路径下的包会直接发布到该service中 -->
-      <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
+	  <!-- errorReportValveClass：默认的错误页面实现，在org.apache.catalina.core.StandartHost类的拼接成stringbuilder之后向前台输出，可重写 -->
+      <Host appBase="webapps" autoDeploy="true" errorReportValveClass="tomcat.context.MyErrorValve" name="localhost" unpackWARs="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
