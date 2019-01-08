@@ -158,6 +158,7 @@
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
+             <!-- 日志的valve拦截 -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <Context docBase="tomcat" path="/tomcat" reloadable="true" source="org.eclipse.jst.j2ee.server:tomcat"/></Host>
