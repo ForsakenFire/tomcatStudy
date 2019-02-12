@@ -31,7 +31,7 @@ public class MyErrorReportValveClass extends ErrorReportValve{
      *  a root cause exception
      */
     protected void report(Request request, Response response, Throwable throwable) {
-
+    	
         int statusCode = response.getStatus();
 
         // Do nothing on a 1xx, 2xx and 3xx status
